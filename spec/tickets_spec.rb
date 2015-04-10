@@ -1,11 +1,12 @@
 require 'spec_helper'
 
-describe 'Root Path' do
-  describe 'GET /' do
-    before { get '/' }
+describe 'Tickets application' do
+  describe 'GET /sessions' do
 
-    it 'is successful' do
-      expect(last_response.status).to eq 200
-    end
+    it 'can get sessions' do
+      get '/sessions/1'
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to eq('Session 1')
+    end    
   end
 end
