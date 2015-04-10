@@ -10,7 +10,7 @@ RSpec.configure do |config|
   include Rack::Test::Methods
 
   def app
-    Tickets
+    Tickets::App
   end
 
   config.expect_with :rspec do |expectations|

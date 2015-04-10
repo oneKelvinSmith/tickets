@@ -1,5 +1,10 @@
 require "tickets/version"
+require 'sinatra/base'
 
 module Tickets
-  # Your code goes here...
+  class App < Sinatra::Base
+    get '/' do
+      'Hello!'
+    end
+  end
 end
