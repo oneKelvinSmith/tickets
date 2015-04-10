@@ -1,8 +1,16 @@
 # Tickets
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tickets`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+## Schema
+session -> id, name
+order_seats -> session_id, id, booked_seats
+order -> id, seats
+
+get session /session/{session_id}
+
+post orders /orders/
+             session_id and seats
+
 
 ## Installation
 
